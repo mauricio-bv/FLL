@@ -1,0 +1,9 @@
+*** Comprehensive video about nano 33 IoT *** 
+https://dronebotworkshop.com/arduino-nano-33-iot/
+
+https://cloud.arduino.cc/home/
+
+*** Voltage Divider ***
+https://dronebotworkshop.com/dc-volt-current/
+
+
