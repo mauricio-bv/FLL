@@ -6,4 +6,23 @@ https://cloud.arduino.cc/home/
 *** Voltage Divider ***
 https://dronebotworkshop.com/dc-volt-current/
 
+** Nano accelerometer: **
+https://docs.arduino.cc/tutorials/nano-33-iot/imu-accelerometer
+
+
+** measure voltage and current **
+https://dronebotworkshop.com/dc-volt-current/
+https://www.arduino.cc/en/Tutorial/BuiltInExamples/ReadAnalogVoltage
+
+
+** IFTTT
+https://docs.arduino.cc/tutorials/nano-33-iot/ifttt-connection
+
+e-mail
+https://github.com/J-oseph/Arduino-Email
+https://zentser-website.webflow.io/blog/setup-sensors-with-arduino-to-send-mobile-and-email-alerts
+https://www.pushsafer.com/en/faq#answer2
+https://github.com/J-oseph/Arduino-Email
+
+
 
