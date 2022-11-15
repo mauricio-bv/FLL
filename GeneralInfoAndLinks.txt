@@ -24,7 +24,8 @@ https://zentser-website.webflow.io/blog/setup-sensors-with-arduino-to-send-mobil
 https://www.pushsafer.com/en/faq#answer2
 https://github.com/J-oseph/Arduino-Email
 
-www.http
+from adrian the better
+
 
 
 
