@@ -1,14 +1,3 @@
-/*
-  Arduino DC Voltage Demo 1
-  dc-voltage-demo.ino
-  Use Arduino A/D converter to measure voltage
-  Use external voltage divider with 30k & 7.5k resistors
-  Results displayed on Serial Monitor
-
-  DroneBot Workshop 2021
-  https://dronebotworkshop.com
-*/
-
 // Define analog input
 #define ANALOG_IN_PIN A0
 
