@@ -1,3 +1,6 @@
+** CIRCUIT **
+https://tinyurl.com/29zj8xa6
+
 *** Comprehensive video about nano 33 IoT *** 
 https://dronebotworkshop.com/arduino-nano-33-iot/
 
@@ -27,4 +30,10 @@ https://github.com/J-oseph/Arduino-Email
 Batteries
 https://blog.modo.energy/battery-degradation-explained
 http://www.referencedesigner.com/cal/battery_life_watt_hour_56.php
+
+LCD
+https://www.youtube.com/watch?time_continue=1686&v=wEbGhYjn4QI&feature=emb_logo
+https://dronebotworkshop.com/lcd-displays-arduino/
+https://github.com/fmalpartida/New-LiquidCrystal
+
 
