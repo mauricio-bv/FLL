@@ -1,5 +1,5 @@
 //Initializing LED Pin
-int led_pin = 8;
+int led_pin = 7;
 
 void setup() {
   //Declaring LED pin as output
@@ -7,14 +7,8 @@ void setup() {
 }
 
 void loop() {
-  //Fading the LED
-  for(int i=0; i<255; i++){
-    analogWrite(led_pin, i);
-    delay(5);
-  }
-
-  for(int i=255; i>0; i--){
-    analogWrite(led_pin, i);
-    delay(5);
-  }
+  digitalWrite(led_pin, HIGH);
+  delay(1000);
+  digitalWrite(led_pin, LOW);
+  delay(1000);
 }

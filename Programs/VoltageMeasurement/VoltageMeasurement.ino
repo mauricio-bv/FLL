@@ -1,4 +1,6 @@
 // Define analog input
+
+
 #define ANALOG_IN_PIN A0
 
 // Floats for ADC voltage & Input voltage
