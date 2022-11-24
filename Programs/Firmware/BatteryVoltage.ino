@@ -1,13 +1,14 @@
 #define ANALOG_IN_PIN A0
 
-float divider_voltage = 0.0;
-float battery_voltage = 0.0;
 float ref_voltage = 3.3;
 float R1 = 30000.0;
 float R2 = 7500.0;
-int divider_adc_value = 0;
 
-void readVoltage() {
+float ReadVoltage() {
+  float divider_voltage;
+  float battery_voltage;
+  int divider_adc_value;
+
   // Read ADC value in divider lead
   divider_adc_value = analogRead(ANALOG_IN_PIN);
 
@@ -16,7 +17,12 @@ void readVoltage() {
 
   battery_voltage = divider_voltage / (R2 / (R1 + R2));
 
-  // Print results to Serial Monitor to 2 decimal places
   Serial.print("Battery Voltage = ");
   Serial.println(battery_voltage, 2);
+  return battery_voltage;
+}
+//  Ah=10(12.8-Vread)
+float GetAH() {
+  float AH = 10 * (12.8 - ReadVoltage());
+  return AH;
 }

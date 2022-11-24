@@ -13,7 +13,6 @@
 
   This example code is in the public domain.
 */
-
 #include <Arduino_LSM6DS3.h>
 
 void setup() {
@@ -38,7 +37,7 @@ void loop() {
   float x, y, z;
 
   if (IMU.accelerationAvailable()) {
-    IMU.readAcceleration(x, y, z);
+    IMU.readAcceleration(x, y, z); 
 
     Serial.print(x);
     Serial.print('\t');
