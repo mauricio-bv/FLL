@@ -37,9 +37,9 @@ void BlinkGreenLED() {
 
 void blinkLED(int pin) {
   digitalWrite(pin, HIGH);
-  delay(1000);
+  delay(400);
   digitalWrite(pin, LOW);
-  delay(1000);
+  delay(400);
 }
 
 void turnLEDsOff() {

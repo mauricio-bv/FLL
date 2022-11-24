@@ -20,7 +20,7 @@ void loop() {
     //SequenceLEDs();
     turnLEDsOff();
     if (AH <= 70) {
-      breathGreenLED();
+      BlinkGreenLED();
       if (critical_message_send) {
         warning_message_send = false;
         critical_message_send = false;
