@@ -32,29 +32,30 @@ bool InitWifi() {
       delay(50000);
     }
   }
+}
 
-  bool SendNotification(float AmpHour, char* message) {
+bool SendNotification(float AmpHour, char* message) {
 
-    // String to send: ?value1=AmpHourAh&value2=25";
-    // String buf;
-    // buf += F("?value1=");
-    // buf += String(AmpHour, 2);
-    // buf += F("Ah &value2=");
-    // buf += message;
-    // Serial.println(buf);
+  //String to send: ?value1=AmpHourAh&value2=25";
+  String buf;
+  buf += F("?value1=");
+  buf += String(AmpHour, 2);
+  buf += F("Ah &value2=");
+  buf += message;
+  Serial.println(buf);
 
-    // if (!client.connect(HOST_NAME, 80)) return false;
-    // client.println("GET " + PATH_NAME + buf + " HTTP/1.1");
-    // client.println("Host: " + String(HOST_NAME));
-    // client.println("Connection: open");
-    // client.println();  // end HTTP header
+  if (!client.connect(HOST_NAME, 80)) return false;
+  client.println("GET " + PATH_NAME + buf + " HTTP/1.1");
+  client.println("Host: " + String(HOST_NAME));
+  client.println("Connection: open");
+  client.println();  // end HTTP header
 
-    // if (client.connected() && client.available()) {
-    //   // read an incoming byte from the server and print it to serial monitor:
-    //   char c = client.read();
-    //   Serial.print("Message sent to server. Response: ");
-    //   Serial.println(c);
-    // } else {
-    //   Serial.println("Message not sent. Client Not connected or Available:");
-    // }
+  if (client.connected() && client.available()) {
+    // read an incoming byte from the server and print it to serial monitor:
+    char c = client.read();
+    Serial.print("Message sent to server. Response: ");
+    Serial.println(c);
+  } else {
+    Serial.println("Message not sent. Client Not connected or Available:");
   }
+}

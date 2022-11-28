@@ -26,7 +26,7 @@ void AddValues(float x, float y) {
 }
 
 bool IsMoving() {
-  
+
   float min_x = 0;
   float max_x = 0;
   float min_y = 0;
@@ -34,11 +34,13 @@ bool IsMoving() {
   bool movingOnX = false;
   max_x = accel_x_vals[0];
   max_x = accel_x_vals[0];
+  float val_x;
+  float val_y;
 
   for (int i = 0; i < ACCELEROMETER_SAMPLES; i++) {
 
-    float val_x = accel_x_vals[i];
-    float val_y = accel_y_vals[i];
+    val_x = accel_x_vals[i];
+    val_y = accel_y_vals[i];
 
     if (val_x > max_x) {
       max_x = val_x;
