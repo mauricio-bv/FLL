@@ -1,7 +1,7 @@
 #include <WiFiNINA.h>
 
-char ssid[] = "dlink-D654";  //"Mbphone";
-char pass[] = "37ADrive";    //"Mauricio123";
+char ssid[] = "Mbphone";     //"dlink-D654";
+char pass[] = "Mauricio123";    //"37ADrive";
 
 WiFiClient client;
 
