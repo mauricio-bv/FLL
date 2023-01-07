@@ -9,11 +9,6 @@ void initializeLEDs() {
   pinMode(redLED_pin, OUTPUT);
 }
 
-void StartupBlink() {
-  digitalWrite(LED_BUILTIN, HIGH);
-  delay(1000);
-  digitalWrite(LED_BUILTIN, LOW);
-}
 
 void breathGreenLED() {
   //Fading the LED
@@ -29,30 +24,15 @@ void breathGreenLED() {
 }
 
 void BlinkYellowLED() {
-  for (int i = 0; i < 10; i++) {
-    digitalWrite(LED_BUILTIN, HIGH);
-    delay(500);
-    digitalWrite(LED_BUILTIN, LOW);
-    delay(500);
-  }
-  delay(5000);
+  blinkLED(yellowLED_pin);
 }
 void BlinkRedLED() {
-  for (int i = 0; i < 10; i++) {
-    digitalWrite(LED_BUILTIN, HIGH);
-    delay(100);
-    digitalWrite(LED_BUILTIN, LOW);
-    delay(100);
-  }
-  delay(5000);
+  blinkLED(redLED_pin);
 }
 
 
 void BlinkGreenLED() {
-  digitalWrite(LED_BUILTIN, HIGH);
-  delay(200);
-  digitalWrite(LED_BUILTIN, LOW);
-  delay(5000);
+  blinkLED(greenLED_pin);
 }
 
 void blinkLED(int pin) {
@@ -60,24 +40,6 @@ void blinkLED(int pin) {
   delay(400);
   digitalWrite(pin, LOW);
   delay(400);
-}
-
-void SignalWifiOn() {
-  for (int i = 0; i < 5; i++) {
-    digitalWrite(LED_BUILTIN, HIGH);
-    delay(200);
-    digitalWrite(LED_BUILTIN, LOW);
-    delay(200);
-  }
-}
-
-void SignalWifiOff() {
-  for (int i = 0; i < 2; i++) {
-    digitalWrite(LED_BUILTIN, HIGH);
-    delay(1000);
-    digitalWrite(LED_BUILTIN, LOW);
-    delay(1000);
-  }
 }
 
 void turnLEDsOff() {

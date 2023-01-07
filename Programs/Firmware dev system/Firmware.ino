@@ -4,21 +4,11 @@ bool warning_message_send = false;
 bool loaded_reported = false;
 
 void setup() {
-  // initializeLEDs();
-  pinMode(LED_BUILTIN, OUTPUT);
-  StartupBlink();
+  initializeLEDs();
   InitAccel();
   InitWifi();
-  if (IsWifiConnected()) {
-    SignalWifiOn();
-    SendNotification(AH, "Hello_There -Obi_Wan_Kenobi");
-  } else {
-    SignalWifiOff();
-  }
-  delay(1000);
-  BlinkGreenLED();
-  BlinkYellowLED();
-  BlinkRedLED();
+  Serial.print("IS WIFI CONNECTED? ");
+  Serial.println(IsWifiConnected());
 }
 
 void loop() {
@@ -27,18 +17,21 @@ void loop() {
   Serial.println(AH);
   ReadAccelVals();
   AddValues(GetAccelX(), GetAccelY());
-  delay(1000);
+  delay(5000);
   if (IsMoving()) {
     SwitchAllLEDs();
   } else {
     turnLEDsOff();
-    if (AH < 9) {
+    if (AH <= 40) {
       BlinkGreenLED();
       if (critical_message_send || warning_message_send) {
         warning_message_send = false;
         critical_message_send = false;
       }
-    } else if (AH >= 11) {
+      if (!loaded_reported) {
+        Serial.print("Battery Charge Level Ok");
+      }
+    } else if (AH > 65) {
       BlinkRedLED();
       loaded_reported = false;
       if (!critical_message_send) {

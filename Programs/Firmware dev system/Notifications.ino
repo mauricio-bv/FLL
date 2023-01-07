@@ -3,11 +3,11 @@
 // char ssid[] = "Mbphone";
 // char pass[] = "Mauricio123";
 
-// char ssid[] = "Bell100";   
-// char pass[] = "61354925581223";
+char ssid[] = "Bell100";   
+char pass[] = "61354925581223";
 
-char ssid[] = "dlink-D654";
-char pass[] = "37ADrive";
+// char ssid[] = "dlink-D654";
+// char pass[] = "37ADrive";
 
 WiFiClient client;
 
