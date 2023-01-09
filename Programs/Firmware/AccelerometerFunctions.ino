@@ -9,16 +9,16 @@ int position = 0;
 void AddValues(float x, float y) {
   accel_x_vals[position] = x;
   accel_y_vals[position] = y;
-  Serial.print("Added x=");
-  Serial.print(accel_x_vals[position]);
-  Serial.print(". For Pos in Array: ");
-  Serial.println(position);
+  // Serial.print("Added x=");
+  // Serial.print(accel_x_vals[position]);
+  // Serial.print(". For Pos in Array: ");
+  // Serial.println(position);
   if (position == ACCELEROMETER_SAMPLES - 1) {
-    for (int i = 0; i < ACCELEROMETER_SAMPLES; i++) {
-      Serial.print(accel_x_vals[i]);
-      Serial.print(",");
-    }
-    Serial.println();
+    // for (int i = 0; i < ACCELEROMETER_SAMPLES; i++) {
+    //   Serial.print(accel_x_vals[i]);
+    //   Serial.print(",");
+    // }
+    // Serial.println();
     position = 0;
   } else {
     position++;
@@ -49,16 +49,16 @@ bool IsMoving() {
     }
   }
 
-  Serial.print("Min=");
-  Serial.print(min_x);
-  Serial.print(", Max=");
-  Serial.print(max_x);
-  Serial.print(" => ");
-  Serial.print(val_x);
-  Serial.print(">");
-  Serial.print(max_x);
-  Serial.print(", Delta X = ");
-  Serial.println(max_x - min_x);
+  // Serial.print("Min=");
+  // Serial.print(min_x);
+  // Serial.print(", Max=");
+  // Serial.print(max_x);
+  // Serial.print(" => ");
+  // Serial.print(val_x);
+  // Serial.print(">");
+  // Serial.print(max_x);
+  // Serial.print(", Delta X = ");
+  // Serial.println(max_x - min_x);
 
   float result = (max_x - min_x);
   if ((max_x - min_x) >= IS_MOVING_TRESHOLD) {
@@ -68,7 +68,10 @@ bool IsMoving() {
   // if (max_y - min_y >= IS_MOVING_TRESHOLD) {
   //   movingOnY = true;
   // }
-  Serial.print("Is Moving: ");
+  if(movingOnX)
+  {
+  Serial.print("IS MOVING: ");
   Serial.println(movingOnX);
+  }
   return (movingOnX);
 }

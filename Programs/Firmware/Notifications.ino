@@ -3,7 +3,7 @@
 // char ssid[] = "Mbphone";
 // char pass[] = "Mauricio123";
 
-// char ssid[] = "Bell100";   
+// char ssid[] = "Bell100";
 // char pass[] = "61354925581223";
 
 char ssid[] = "dlink-D654";
@@ -48,7 +48,7 @@ bool SendNotification(float AmpHour, char* message) {
   buf += String(AmpHour, 2);
   buf += F("Ah &value2=");
   buf += message;
-  Serial.println(buf);
+ // Serial.println(buf);
 
   if (!client.connect(HOST_NAME, 80)) return false;
   client.println("GET " + PATH_NAME + buf + " HTTP/1.1");
@@ -56,12 +56,21 @@ bool SendNotification(float AmpHour, char* message) {
   client.println("Connection: open");
   client.println();  // end HTTP header
 
-  if (client.connected() && client.available()) {
+  // Serial.print("Is Connected: ");
+  // Serial.println(client.connected());
+  // Serial.print("Is Available: ");
+  // Serial.println(client.available());
+
+
+  if (client.connected())  // && client.available())
+  {
     // read an incoming byte from the server and print it to serial monitor:
     char c = client.read();
-    Serial.print("Message sent to server. Response: ");
-    Serial.println(c);
+    // Serial.print("Message sent to server. Response: ");
+    // Serial.println(c);
+    return true;
   } else {
-    Serial.println("Message not sent. Client Not connected or Available:");
+   // Serial.println("Message not sent. Client Not connected or Available:");
+    return false;
   }
 }
