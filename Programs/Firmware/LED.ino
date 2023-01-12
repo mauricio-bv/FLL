@@ -38,7 +38,7 @@ void BlinkMustCharge() {
   delay(300);
 }
 void BlinkCriticallyLow() {
-  for (int i = 0; i < 5; i++) {
+  for (int i = 0; i < 10; i++) {
     digitalWrite(LED_BUILTIN, HIGH);
     delay(100);
     digitalWrite(LED_BUILTIN, LOW);
@@ -50,9 +50,9 @@ void BlinkCriticallyLow() {
 
 void BlinkBatteryOK() {
   digitalWrite(LED_BUILTIN, HIGH);
-  delay(200);
+  delay(1500);
   digitalWrite(LED_BUILTIN, LOW);
-  delay(2000);
+  delay(800);
 }
 
 void blinkLED(int pin) {
@@ -63,21 +63,23 @@ void blinkLED(int pin) {
 }
 
 void SignalWifiOn() {
-  for (int i = 0; i < 5; i++) {
+  for (int i = 0; i < 6; i++) {
     digitalWrite(LED_BUILTIN, HIGH);
     delay(200);
     digitalWrite(LED_BUILTIN, LOW);
     delay(200);
   }
+  delay(2000);
 }
 
 void SignalWifiOff() {
-  for (int i = 0; i < 2; i++) {
+  for (int i = 0; i < 3; i++) {
     digitalWrite(LED_BUILTIN, HIGH);
     delay(1000);
     digitalWrite(LED_BUILTIN, LOW);
-    delay(1000);
+    delay(500);
   }
+  delay(1000);
 }
 
 void turnLEDsOff() {

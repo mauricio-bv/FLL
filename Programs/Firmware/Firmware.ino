@@ -10,14 +10,27 @@ void setup() {
   InitWifi();
   if (IsWifiConnected()) {
     SignalWifiOn();
-    SendNotification(AH, "Hello_There -Obi_Wan_Kenobi");
+    SendNotification(AH, "Adriometer_micro_re-started");
+    delay(500);
   } else {
     SignalWifiOff();
+    delay(1000);
   }
-  delay(500);
-  BlinkBatteryOK();
+  
+  // Demo Battery charged
+  for (int i = 0; i < 5; i++) {
+    BlinkBatteryOK();
+  }
+  delay(2000);
+
+  // Demo Battery Must be charged
   BlinkMustCharge();
+  delay(2000);
+
+  // Demo Battery Critically Low
   BlinkCriticallyLow();
+   delay(2000);
+
 }
 
 void loop() {
@@ -52,7 +65,7 @@ void loop() {
           critical_message_send = SendNotification(AH, "Battery_Charge_Very_Low");
         }
       }
-    } else { 
+    } else {
       if (critical_message_send && AH >= 10) {
         BlinkCriticallyLow();
       } else {
