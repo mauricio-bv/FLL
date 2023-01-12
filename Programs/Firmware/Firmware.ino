@@ -15,9 +15,9 @@ void setup() {
     SignalWifiOff();
   }
   delay(500);
-  BlinkGreenLED();
-  BlinkYellowLED();
-  BlinkRedLED();
+  BlinkBatteryOK();
+  BlinkMustCharge();
+  BlinkCriticallyLow();
 }
 
 void loop() {
@@ -31,18 +31,19 @@ void loop() {
     SwitchAllLEDs();
   } else {
     turnLEDsOff();
-    if (AH < 8.45) {
-      if (AH > 6.9 && warning_message_send) {
-        BlinkYellowLED();
+    if (AH < 9) {
+      // A buffer to compensate for noise (for now)
+      if (AH > 6 && warning_message_send) {
+        BlinkMustCharge();
       } else {
-        BlinkGreenLED();
+        BlinkBatteryOK();
         if (critical_message_send || warning_message_send) {
           warning_message_send = false;
           critical_message_send = false;
         }
       }
     } else if (AH >= 11) {
-      BlinkRedLED();
+      BlinkCriticallyLow();
       loaded_reported = false;
       if (!critical_message_send) {
         if (!IsWifiConnected()) {
@@ -51,11 +52,11 @@ void loop() {
           critical_message_send = SendNotification(AH, "Battery_Charge_Very_Low");
         }
       }
-    } else {
+    } else { 
       if (critical_message_send && AH >= 10) {
-        BlinkRedLED();
+        BlinkCriticallyLow();
       } else {
-        BlinkYellowLED();
+        BlinkMustCharge();
         loaded_reported = false;
         if (!warning_message_send) {
           if (!IsWifiConnected()) {

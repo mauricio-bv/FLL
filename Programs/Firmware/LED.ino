@@ -28,7 +28,7 @@ void breathGreenLED() {
   }
 }
 
-void BlinkYellowLED() {
+void BlinkMustCharge() {
   for (int i = 0; i < 5; i++) {
     digitalWrite(LED_BUILTIN, HIGH);
     delay(500);
@@ -37,7 +37,7 @@ void BlinkYellowLED() {
   }
   delay(300);
 }
-void BlinkRedLED() {
+void BlinkCriticallyLow() {
   for (int i = 0; i < 5; i++) {
     digitalWrite(LED_BUILTIN, HIGH);
     delay(100);
@@ -48,7 +48,7 @@ void BlinkRedLED() {
 }
 
 
-void BlinkGreenLED() {
+void BlinkBatteryOK() {
   digitalWrite(LED_BUILTIN, HIGH);
   delay(200);
   digitalWrite(LED_BUILTIN, LOW);

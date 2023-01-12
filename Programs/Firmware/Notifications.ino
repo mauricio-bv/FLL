@@ -3,11 +3,11 @@
 // char ssid[] = "Mbphone";
 // char pass[] = "Mauricio123";
 
-// char ssid[] = "Bell100";
-// char pass[] = "61354925581223";
+char ssid[] = "BELL100";
+char pass[] = "61354925581223";
 
-char ssid[] = "dlink-D654";
-char pass[] = "37ADrive";
+// char ssid[] = "dlink-D654";
+// char pass[] = "37ADrive";
 
 WiFiClient client;
 
@@ -25,7 +25,7 @@ bool InitWifi() {
 
   byte count = 0;
 
-  for (int i = 0; i >= 4; i++) {
+  for (int i = 0; i >= 5; i++) {
 
     if (IsWifiConnected()) {
       Serial.println("Connected to WiFi");
