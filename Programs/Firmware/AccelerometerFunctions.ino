@@ -68,10 +68,10 @@ bool IsMoving() {
   // if (max_y - min_y >= IS_MOVING_TRESHOLD) {
   //   movingOnY = true;
   // }
-  if(movingOnX)
-  {
-  Serial.print("IS MOVING: ");
-  Serial.println(movingOnX);
-  }
+  // if(movingOnX)
+  // {
+  // Serial.print("IS MOVING: ");
+  // Serial.println(movingOnX);
+  // }
   return (movingOnX);
 }
