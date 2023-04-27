@@ -1,10 +1,10 @@
 #include <WiFiNINA.h>
 
-// char ssid[] = "Mbphone";
-// char pass[] = "Mauricio123";
+char ssid[] = "Mbphone";
+char pass[] = "Mauricio123";
 
-char ssid[] = "BELL100";
-char pass[] = "61354925581223";
+// char ssid[] = "BELL100";
+// char pass[] = "61354925581223";
 
 // char ssid[] = "dlink-D654";
 // char pass[] = "37ADrive";
@@ -29,13 +29,13 @@ bool InitWifi() {
 
     if (IsWifiConnected()) {
       Serial.println("Connected to WiFi");
-      delay(5000);
+      delay(500);
 
       return true;
     } else {
       Serial.print("connection failed");
       Serial.println(i);
-      delay(50000);
+      delay(500);
     }
   }
 }
