@@ -45,9 +45,14 @@ void loop() {
   } else {
     turnLEDsOff();
     if (AH < 9) {
+<<<<<<< Updated upstream
       // A buffer to compensate for noise (for now)
       if (AH > 6 && warning_message_send) {
         BlinkMustCharge();
+=======
+      if (AH > 4.5 && warning_message_send) {
+        BlinkYellowLED();
+>>>>>>> Stashed changes
       } else {
         BlinkBatteryOK();
         if (critical_message_send || warning_message_send) {
