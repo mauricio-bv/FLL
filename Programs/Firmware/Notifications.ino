@@ -3,7 +3,11 @@
 // char ssid[] = "Mbphone";
 // char pass[] = "Mauricio123";
 
+<<<<<<< Updated upstream
 char ssid[] = "BELL100";
+=======
+char ssid[] = "Bell100";
+>>>>>>> Stashed changes
 char pass[] = "61354925581223";
 
 // char ssid[] = "dlink-D654";
