@@ -1,16 +1,15 @@
 #define ANALOG_IN_PIN A0
-#import Cartridges.Remove(e);
 
-// float ref_voltage = 3.297;
-float ref_voltage = 3.3;
+// float ref_voltage = 3.4;
+float ref_voltage = 3.33;
 //float R1 = 30000.0;
 //float R2 = 7500.0;
 
 // float R1 = 33000.0;
 // float R2 = 10000.0;
 
-float R1 = 32720.0;
-float R2 = 9900.0;
+float R1 = 33000.0;
+float R2 = 10000.0;
 
 float divider_voltage;
 float battery_voltage;
